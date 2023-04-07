@@ -1,8 +1,6 @@
 # Battery State of Charge Prediction
 
-Companion Streamlit cloud app to [battery-state-of-charge-estimation](https://github.com/sautee/battery-state-of-charge-estimation).
-
-Models are built using Tensorflow and trained on ***[LG 18650HG2](https://data.mendeley.com/datasets/cp3473x7xv/3)*** and ***[Panasonic 18650PF](https://data.mendeley.com/datasets/wykht8y7tg/1)*** Li-ion battery datasets.
+Companion Streamlit cloud app to ***[battery-state-of-charge-estimation](https://github.com/sautee/battery-state-of-charge-estimation)***.
 
 ## Repository Contents
 - `pre-trained/`: Pre-trained DNN, CNN, and LSTM models.
