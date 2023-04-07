@@ -27,12 +27,12 @@ columns = ['Voltage', 'Current', 'Voltage Average', 'Current Average', 'Temperat
 lstm_steps =300
 
 def list_saved_models(path):
-    for models in os.listdir(path):
-        if 'comb' in models:
+    for models in sorted(os.listdir(path)):
+        if not models.startswith('.') and models.startswith('comb'):
             yield models
 
 def list_example_files(path):
-    for examples in os.listdir(path):
+    for examples in sorted(os.listdir(path)):
         if not examples.startswith('.'):
             yield examples
                  
