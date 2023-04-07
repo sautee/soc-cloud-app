@@ -41,7 +41,7 @@ def load_model(model_path):
     model = tf.keras.models.load_model(model_path)
     return model
 
-def main() -> None:
+def run():
     st.header("Predict Battery State of Charge :battery: :bar_chart:")
     
     st.sidebar.markdown(side_intro, unsafe_allow_html=True)
@@ -166,4 +166,4 @@ if __name__ == "__main__":
         initial_sidebar_state="expanded",
         layout="wide",
     )
-    main()
+    run()
