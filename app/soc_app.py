@@ -15,10 +15,10 @@ from sidebar_intro import text as side_intro
 from sidebar_body import text as side_body
  
 
-base_path = './'
+base_path = '../'
 
 sys.path.append(base_path)
-import utils
+from training import utils
 
 saved_models_path = base_path + 'pre-trained/'
 example_files_path = 'examples'
@@ -60,7 +60,7 @@ def main() -> None:
         resample_1Hz = False
 
     with st.expander("Getting Started"):
-        st.write(Path("README.md").read_text())
+        st.write(Path("getstarted.md").read_text())
 
     st.subheader("Upload cell discharge cycle CSV file")
     uploaded_data = st.file_uploader(
