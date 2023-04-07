@@ -2,8 +2,6 @@
 
 Companion Streamlit cloud app to ***[battery-state-of-charge-estimation](https://github.com/sautee/battery-state-of-charge-estimation)***.
 
-![image](https://user-images.githubusercontent.com/39371787/230544206-2f863ec5-7c81-4753-9671-94d81cff6727.png)
-
 ## Repository Contents
 - `pre-trained/`: Pre-trained DNN, CNN, and LSTM models.
 - `examples/`: Example discharge cycle files.
