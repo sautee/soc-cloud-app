@@ -28,7 +28,7 @@ lstm_steps =300
 
 def list_saved_models(path):
     for models in os.listdir(path):
-        if not models.startswith('.') and models.startswith('comb'):
+        if 'comb' in models:
             yield models
 
 def list_example_files(path):
