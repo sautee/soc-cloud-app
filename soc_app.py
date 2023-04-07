@@ -15,10 +15,10 @@ from sidebar_intro import text as side_intro
 from sidebar_body import text as side_body
  
 
-base_path = './'
+base_path = '../'
 
 sys.path.append(base_path)
-import utils
+from training import utils
 
 saved_models_path = base_path + 'pre-trained/'
 example_files_path = 'examples'
@@ -27,12 +27,12 @@ columns = ['Voltage', 'Current', 'Voltage Average', 'Current Average', 'Temperat
 lstm_steps =300
 
 def list_saved_models(path):
-    for models in sorted(os.listdir(path)):
+    for models in os.listdir(path):
         if not models.startswith('.') and models.startswith('comb'):
             yield models
 
 def list_example_files(path):
-    for examples in sorted(os.listdir(path)):
+    for examples in os.listdir(path):
         if not examples.startswith('.'):
             yield examples
                  
@@ -41,13 +41,13 @@ def load_model(model_path):
     model = tf.keras.models.load_model(model_path)
     return model
 
-def run():
+def main() -> None:
     st.header("Predict Battery State of Charge :battery: :bar_chart:")
     
     st.sidebar.markdown(side_intro, unsafe_allow_html=True)
     st.sidebar.subheader(":gear: App Options")
-    selected_model = st.sidebar.selectbox("Select pre-trained model", list_saved_models(saved_models_path))
-    example_file = st.sidebar.selectbox("Select example file", list_example_files(example_files_path))
+    selected_model = st.sidebar.selectbox("Select pre-trained model", list_saved_models(saved_models_path).sort())
+    example_file = st.sidebar.selectbox("Select example file", list_example_files(example_files_path).sort())
     example_file = os.path.join(example_files_path, example_file)
     st.sidebar.markdown(side_body, unsafe_allow_html=True)
     
@@ -166,4 +166,4 @@ if __name__ == "__main__":
         initial_sidebar_state="expanded",
         layout="wide",
     )
-    run()
+    main()
