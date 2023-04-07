@@ -15,7 +15,7 @@ from sidebar_intro import text as side_intro
 from sidebar_body import text as side_body
  
 
-base_path = '../'
+base_path = './'
 
 sys.path.append(base_path)
 import utils
