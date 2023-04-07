@@ -15,10 +15,10 @@ from sidebar_intro import text as side_intro
 from sidebar_body import text as side_body
  
 
-base_path = '../'
+base_path = './'
 
 sys.path.append(base_path)
-from training import utils
+import utils
 
 saved_models_path = base_path + 'pre-trained/'
 example_files_path = 'examples'
