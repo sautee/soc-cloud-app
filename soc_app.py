@@ -18,7 +18,7 @@ from sidebar_body import text as side_body
 base_path = '../'
 
 sys.path.append(base_path)
-from training import utils
+import utils
 
 saved_models_path = base_path + 'pre-trained/'
 example_files_path = 'examples'
@@ -46,8 +46,8 @@ def main() -> None:
     
     st.sidebar.markdown(side_intro, unsafe_allow_html=True)
     st.sidebar.subheader(":gear: App Options")
-    selected_model = st.sidebar.selectbox("Select pre-trained model", list_saved_models(saved_models_path))
-    example_file = st.sidebar.selectbox("Select example file", list_example_files(example_files_path))
+    selected_model = st.sidebar.selectbox("Select pre-trained model", list_saved_models(saved_models_path).sort())
+    example_file = st.sidebar.selectbox("Select example file", list_example_files(example_files_path).sort())
     example_file = os.path.join(example_files_path, example_file)
     st.sidebar.markdown(side_body, unsafe_allow_html=True)
     
