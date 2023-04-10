@@ -7,10 +7,6 @@ Companion Streamlit cloud app to ***[battery-state-of-charge-estimation](https:/
 - `examples/`: Example discharge cycle files.
 
 ## Acknowledgements
-### Contributors
-Talha K., Nemesh W., Xili D. -- Memorial Univserity of Newfoundland
-
-### Datasets
 Kollmeyer, Philip; Vidal, Carlos; Naguib, Mina; Skells, Michael  (2020), “LG 18650HG2 Li-ion Battery Data and Example Deep Neural Network xEV SOC Estimator Script”, Mendeley Data, V3, doi: 10.17632/cp3473x7xv.3
 
 Kollmeyer, Phillip (2018), “Panasonic 18650PF Li-ion Battery Data”, Mendeley Data, V1, doi: 10.17632/wykht8y7tg.1
